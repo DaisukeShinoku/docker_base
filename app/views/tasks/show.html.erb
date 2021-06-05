@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @task.body %>
+</p>
+
+<% if @task.image? %>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag @task.image.url %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
